@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'SamsungOne'; 
+  src: url(samsungone/SamsungOne-700.ttf) format(truetype); 
+}
+
+
+body {
+  background-color: white;
+  scroll-behavior: smooth;
+  font-family: 'SamsungOne',arial, sans-serif;
+}
+
+/* Add this to your global CSS or Tailwind config */
+.hide-scrollbar::-webkit-scrollbar {
+display: none; /* Hides the scrollbar */
+}
+
+.hide-scrollbar {
+-ms-overflow-style: none; /* Internet Explorer 10+ */
+scrollbar-width: none; /* Firefox */
+}
+
+/* Bot UI */
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.message-content {
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 70%;
+}
+
+.user-message {
+  flex-direction: row-reverse;
+}
+
+.user-message .message-content {
+  background-color: #4a90e2;
+  margin-right: 10px;
+  text-wrap: wrap;
+  text-overflow: ellipsis;
+}
+
+.bot-message .message-content {
+  background-color: #7d7d7d;
+  margin-left: 10px;
+}
+
+
+.profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid black;
+}
+
+
